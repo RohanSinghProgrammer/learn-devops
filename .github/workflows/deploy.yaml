@@ -1,0 +1,25 @@
+name: Deploy Node.js Application
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Build Code
+        run: npm start
+      
+      - name: Test Code
+        run: npm run test
