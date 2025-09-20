@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js",
+    "deploy": "sh deploy.sh",
     "dev": "node --watch server.js",
     "start": "node server.js",
     "build": "node build.js"
