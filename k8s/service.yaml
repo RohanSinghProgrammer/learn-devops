@@ -1,12 +1,12 @@
 apiVersion: v1 
 kind: Service
 metadata:
-  name: kubernetes-demo-api
+  name: learn-devops-api
   labels:
-    app: kubernetes-demo-api
+    app: learn-devops-api
 spec:
   selector:
-    app: kubernetes-demo-api
+    app: learn-devops-api
   ports:
     - protocol: TCP
       ports: 4000 # Serviece Port
