@@ -1,14 +1,14 @@
-apiVersion: v1 
+apiVersion: v1
 kind: Service
 metadata:
-  name: learn-devops-api
+  name: kubernetes-demo-api
   labels:
-    app: learn-devops-api
+    app: kubernetes-demo-api
 spec:
   selector:
-    app: learn-devops-api
+    app: kubernetes-demo-api
   ports:
     - protocol: TCP
-      ports: 4000 # Serviece Port
+      port: 4000 # Service Port
       targetPort: 4000 # Container Port
   type: NodePort # change to LoadBalancer if running in cloud
